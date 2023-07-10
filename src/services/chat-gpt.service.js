@@ -3,13 +3,14 @@ export async function chatCompletion({ messages, model }) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer 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'
+      'Authorization': 'Bearer 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'
     },
     body: JSON.stringify({
       model: model,
       messages: messages,
     })
   })
+  console.log("🚀 ~ file: chat-gpt.service.js:13 ~ chatCompletion ~ response:", response)
 
   if (response) {
     return await response.json()
