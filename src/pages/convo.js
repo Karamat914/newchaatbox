@@ -8,14 +8,6 @@ import Avatar from "../components/avatar";
 import { chatCompletion } from "../services/chat-gpt.service";
 import AppBar from "../components/app-bar";
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// import {
-//   Navigation,
-//   Pagination,
-//   Mousewheel,
-//   Keyboard,
-//   EffectCoverflow,
-// } from "swiper/modules";
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
