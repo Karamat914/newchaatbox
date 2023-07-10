@@ -17,9 +17,9 @@ export default function Home({onStartSession}) {
 
         <Button onClick={()=>{onStartSession()}}>iniciar</Button>
       </div>
-      <div className='h-96 relative'>
+      <div className='h-96 relative img_button'>
         <img className='absolute bottom-0 left-6 h-full' src="/logo-lu-do-magalu.webp" alt="" />
-        <div className='absolute w-fit top-0 left-56 lg:left-64 xl:left-64 2xl:left-10'>
+        <div className='absolute w-fit top-0 left-56 lg:left-64 xl:left-64 2xl:left-10 btn_estou'>
           <ChatBubble content={'Estou aqui para te ajudar!'} />
         </div>
       </div>

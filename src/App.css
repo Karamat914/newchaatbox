@@ -39,17 +39,17 @@ html {
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.w-screen{
+.w-screen {
   width: 100% !important;
 }
-.pb-20{
- height: auto !important;
+.pb-20 {
+  height: auto !important;
   /* position: relative !important; */
 }
 .App-link {
   color: #61dafb;
 }
-.slider{
+.slider {
   min-height: 250px !important;
 }
 @keyframes App-logo-spin {
@@ -248,14 +248,14 @@ body {
   /* width: 0px !important; */
   height: 42rem;
   flex-shrink: 0 !important;
-  width :auto !important;
+  width: auto !important;
   height: 100% !important;
   position: relative !important;
   transition-property: transform;
   display: block;
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
   .swiper_container {
     height: 47rem;
   }
@@ -268,7 +268,7 @@ body {
     width: 28rem !important;
     height: 36rem !important;
   }
-}
+} */
 
 .swiper-slide img {
   width: 37rem;
@@ -286,7 +286,6 @@ body {
   position: relative;
   bottom: 2rem;
   display: flex !important;
-
   align-items: center !important;
   justify-content: center !important;
 }
@@ -340,15 +339,15 @@ body {
 }
 
 .slider-controler .slider-arrow::after {
-  content: '';
+  content: "";
 }
 
 .swiper-pagination {
-  /* position: relative; */
+  position: relative !important;
   width: 15rem !important;
   bottom: 1rem;
-  margin-left: 10px;
-  
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .swiper-pagination .swiper-pagination-bullet {
@@ -358,22 +357,32 @@ body {
 .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
 }
-.silider_p{
+.silider_p {
   margin-top: -45px;
   font-size: 23px;
 
   font-size: bold;
-font-weight: 700;
-text-align: center;
+  font-weight: 700;
+  text-align: center;
 }
-.iconsilder{
-display: flex;
-justify-content: end;
-align-items: end;
-position: absolute;
-top: 20px;
-width: 100%;
+.iconsilder {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  position: absolute;
+  top: 20px;
+  width: 100%;
 }
-.inputfeilid{
-  z-index: 1 !important;
+.inputfeilid {
+  z-index: 99999 !important;
+}
+
+.swiper {
+  /* z-index: -1 !important; */
+}
+
+.img_button {
+}
+.btn_estou {
+  padding: 0px 20px;
 }

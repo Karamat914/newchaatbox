@@ -7,7 +7,7 @@ import ChatBubble from "../components/chat-bubble";
 import Avatar from "../components/avatar";
 import { chatCompletion } from "../services/chat-gpt.service";
 import AppBar from "../components/app-bar";
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // import {
 //   Navigation,
@@ -16,17 +16,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 //   Keyboard,
 //   EffectCoverflow,
 // } from "swiper/modules";
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import pic2 from "../assects/pic2.webp";
 import pic3 from "../assects/pic3.webp";
 import pic4 from "../assects/pic4.webp";
-
 
 export default function Convo() {
   const model = "gpt-3.5-turbo";
@@ -216,55 +214,45 @@ export default function Convo() {
                 className="swiper_container"
               >
                 {productPreview?.map((p, i) => (
-                    <SwiperSlide key={`preview-${i}`}>
-             
-                        <div
-                          onClick={() => {
-                            window
-                              .open(
-                                `https://www.magazineluiza.com.br/busca/${p}`,
-                                "_blank"
-                              )
-                              .focus();
-                          }}
-                        >
-                          <div className="iconsilder">
-                          <OpenIcon width={"18px"} />
+                  <SwiperSlide key={`preview-${i}`}>
+                    <div
+                      onClick={() => {
+                        window
+                          .open(
+                            `https://www.magazineluiza.com.br/busca/${p}`,
+                            "_blank"
+                          )
+                          .focus();
+                      }}
+                    >
+                      <div className="iconsilder">
+                        <OpenIcon width={"18px"} />
+                      </div>
+                      {updatedWatchImages
+                        .filter((item) => item.name === p)
+                        .map((item, j) => (
+                          <div key={`watch-${i}-${j}`}>
+                            <img
+                              className="imgproduct"
+                              src={item.image}
+                              alt="Card Image"
+                            />
                           </div>
-                            {updatedWatchImages
-                              .filter((item) => item.name === p)
-                              .map((item, j) => (
-                                <div key={`watch-${i}-${j}`}>
-                                  <img
-                                    className="imgproduct"
-                                    src={item.image}
-                                    alt="Card Image"
-                                  />
-                                </div>
-                              ))}
-                              <p className="silider_p">{p}</p >
-
-                         
-                            
-
-                            
-                          {/* </div> */}
-                        {/* </div> */}
-                      </div> 
-                   
-                   
-                    </SwiperSlide>
-                    
-                ))}
-                    <div className="slider-controler">
-                      <div className="swiper-button-prev slider-arrow">
-                        <ion-icon name="arrow-back-outline"></ion-icon>
-                      </div>
-                      <div className="swiper-button-next slider-arrow">
-                        <ion-icon name="arrow-forward-outline"></ion-icon>
-                      </div>
-                      <div className="swiper-pagination"></div>
+                        ))}
+                      <p className="silider_p">{p}</p>
                     </div>
+                  </SwiperSlide>
+                ))}
+                <div className="slider-controler">
+                  <div className="swiper-button-prev slider-arrow">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                  </div>
+
+                  <div className="swiper-button-next slider-arrow">
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                  </div>
+                  <div className="swiper-pagination"></div>
+                </div>
               </Swiper>
             </div>
           </div>
