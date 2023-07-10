@@ -12,7 +12,7 @@ const ChatGPTComponent = () => {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': 'Bearer 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' // Substitua YOUR_API_KEY pela sua chave de API
+                    'Authorization': 'Bearer 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' // Substitua YOUR_API_KEY pela sua chave de API
                 },
                 body: JSON.stringify({
                     model: 'gpt-3.5-turbo',

@@ -3,7 +3,7 @@ export async function chatCompletion({ messages, model }) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer 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'
+      'Authorization': 'Bearer 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'
     },
     body: JSON.stringify({
       model: model,
